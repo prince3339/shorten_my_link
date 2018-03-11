@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
 class LinkCreate extends Component {
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
         
+        console.log(this.refs.link.value);
     }
 
     render() {
@@ -12,12 +14,14 @@ class LinkCreate extends Component {
                     <label className="">
                         Link to shorten
                     </label>
-                    <input className="form-control" /> 
+                    <input ref="link" 
+                           className="form-control" /> 
                 </div>
 
                 <button className="btn btn-primary">Shorten!</button>
             </form>
         );
+        //here ref works like angular ng-model
     }
 }
 
