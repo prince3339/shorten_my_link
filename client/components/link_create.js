@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 class LinkCreate extends Component {
+    handleSubmit() {
+        
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group">
                     <label className="">
                         Link to shorten
